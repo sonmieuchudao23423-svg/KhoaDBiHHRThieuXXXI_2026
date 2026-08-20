@@ -31,18 +31,18 @@ export function App() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-center space-y-4 max-w-6xl mt-4 w-full px-4"
+          className="text-center space-y-4 md:space-y-5 max-w-6xl mt-4 md:mt-8 w-full px-4"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-black tracking-tight leading-snug text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-600 drop-shadow-sm font-cinzel whitespace-nowrap">
-            <span className="block">KHÓA DỰ BỊ HUY HIỆU RỪNG</span>
-            <span className="block mt-2">TRẦN QUỐC TOẢN XXXI</span>
+          <h1 className="md:text-5xl lg:text-[4rem] font-black tracking-tight leading-snug md:leading-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-600 drop-shadow-sm font-cinzel">
+            <span className="block whitespace-nowrap text-[5.5vw] sm:text-4xl md:text-inherit">KHÓA DỰ BỊ HUY HIỆU RỪNG</span>
+            <span className="block mt-1 md:mt-2 whitespace-nowrap text-[5vw] sm:text-3xl md:text-inherit">TRẦN QUỐC TOẢN XXXI</span>
           </h1>
-          <div className="text-emerald-200/80 font-medium tracking-wider text-sm md:text-base pt-2 flex items-center justify-center gap-4">
-            <span>TP.Đà Nẵng</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-            <span>Khu du lịch sinh thái Hà Gia</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-            <span>28 - 30.08.2026</span>
+          <div className="text-emerald-100/90 font-medium tracking-wider text-sm md:text-base pt-2 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
+            <span className="text-center">TP.Đà Nẵng</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 hidden md:block"></span>
+            <span className="text-center">Khu du lịch sinh thái Hà Gia</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 hidden md:block"></span>
+            <span className="text-center font-bold text-emerald-300">28 - 30.08.2026</span>
           </div>
         </motion.div>
 
