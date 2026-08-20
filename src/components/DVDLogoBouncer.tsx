@@ -103,7 +103,7 @@ export const DVDLogoBouncer = () => {
         src={images[currentIndex]}
         alt="DVD Bouncing Logo"
         // Kích thước to hơn theo yêu cầu
-        className="absolute top-0 left-0 w-[160px] md:w-[200px] h-auto object-contain drop-shadow-[0_0_40px_rgba(0,0,0,0.8)] z-50"
+        className="absolute top-0 left-0 w-[160px] md:w-[200px] h-auto object-contain z-50"
         style={{ willChange: 'transform' }}
       />
     </div>

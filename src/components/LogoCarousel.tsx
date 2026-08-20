@@ -51,7 +51,7 @@ export const LogoCarousel = () => {
             rotate: 180, // Tiếp tục xoay
             transition: { duration: 2.5, ease: "easeInOut" } // Đi ra ngay lập tức
           }}
-          className="absolute z-20 flex items-center justify-center drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
+          className="absolute z-20 flex items-center justify-center"
         >
           {/* Chỉ hiển thị Logo trần, không khung viền */}
           <img
