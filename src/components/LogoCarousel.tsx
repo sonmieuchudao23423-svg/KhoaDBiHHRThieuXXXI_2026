@@ -36,14 +36,12 @@ export const LogoCarousel = () => {
             scale: 3, // To bự ở ngoài
             x: '-100vw', // Chắc chắn nằm ngoài màn hình bên trái
             rotate: -180, // Xoay ngược
-            filter: 'blur(20px)',
           }}
           animate={{ 
             opacity: 1, 
             scale: 1, // Nhỏ dần vừa màn hình
             x: 0, // Di chuyển vào giữa
             rotate: 0, // Dừng xoay khi ở giữa
-            filter: 'blur(0px) drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.6))',
             transition: { delay: 1, duration: 2.5, ease: "easeInOut" } // Đợi 1s sau khi logo cũ bay ra xong mới bắt đầu bay vào
           }}
           exit={{ 
@@ -51,10 +49,9 @@ export const LogoCarousel = () => {
             scale: 3, // Ra thì to dần
             x: '100vw', // Lướt ra ngoài màn hình bên phải
             rotate: 180, // Tiếp tục xoay
-            filter: 'blur(20px)',
             transition: { duration: 2.5, ease: "easeInOut" } // Đi ra ngay lập tức
           }}
-          className="absolute z-20 flex items-center justify-center"
+          className="absolute z-20 flex items-center justify-center drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
         >
           {/* Chỉ hiển thị Logo trần, không khung viền */}
           <img
