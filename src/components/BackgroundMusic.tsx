@@ -100,6 +100,7 @@ export function BackgroundMusic({ videoIds }: BackgroundMusicProps) {
       showinfo: 0,
       rel: 0,
       modestbranding: 1,
+      playsinline: 1, // Ngăn iOS / Android mở video player gốc toàn màn hình
     },
   };
 
