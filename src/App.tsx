@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { LogoCarousel } from './components/LogoCarousel';
 import { ScoutBackground } from './components/ScoutBackground';
 import { DVDLogoBouncer } from './components/DVDLogoBouncer';
+import { BackgroundMusic } from './components/BackgroundMusic';
 
 export function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -20,6 +21,15 @@ export function App() {
 
   return (
     <div className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-[#041c10] text-emerald-50 font-jakarta selection:bg-emerald-500/30">
+
+      {/* Danh sách các ID video YouTube. Hệ thống sẽ phát ngẫu nhiên và tự động chuyển bài */}
+      <BackgroundMusic videoIds={[
+        "q2edvaoLlz0",
+        "-TwPga6oGJY",
+        "0dzp80Mun_4",
+        "L-U5MHY_NhU",
+        "gMS0Gymdzzg"
+      ]} />
 
       {/* Scout Theme Background (Campfire, Forest, Topographic) */}
       <ScoutBackground hideCampfireGlow={isDvdEffect} />
