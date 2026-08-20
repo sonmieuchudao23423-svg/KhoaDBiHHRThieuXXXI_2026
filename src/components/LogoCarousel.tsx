@@ -1,11 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const images = [
-  '/logo-1.png',
-  '/logo-2.png',
-  '/logo-3.png'
-];
+import { LOGOS } from '../constants/logos';
 
 export const LogoCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,7 +11,7 @@ export const LogoCarousel = () => {
       // Đảm bảo chỉ lặp khi trình duyệt (tab) đang được hiển thị.
       // Điều này ngăn chặn bộ đếm thời gian bị dồn ứ (desync queue) khi treo máy nhiều tiếng đồng hồ.
       if (!document.hidden) {
-        setCurrentIndex((prev) => (prev + 1) % images.length);
+        setCurrentIndex((prev) => (prev + 1) % LOGOS.length);
       }
     }, 10000);
     return () => clearInterval(timer);
@@ -55,7 +51,7 @@ export const LogoCarousel = () => {
         >
           {/* Chỉ hiển thị Logo trần, không khung viền */}
           <img
-            src={images[currentIndex]}
+            src={LOGOS[currentIndex]}
             alt={`Logo ${currentIndex + 1}`}
             className="w-[240px] md:w-[320px] h-auto object-contain"
           />

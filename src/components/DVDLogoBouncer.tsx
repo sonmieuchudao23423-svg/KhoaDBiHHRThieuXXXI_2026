@@ -1,10 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const images = [
-  '/logo-1.png',
-  '/logo-2.png',
-  '/logo-3.png'
-];
+import { LOGOS } from '../constants/logos';
 
 export const DVDLogoBouncer = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -120,7 +116,7 @@ export const DVDLogoBouncer = () => {
         }
 
         if (hitEdge) {
-          setCurrentIndex((prev) => (prev + 1) % images.length);
+          setCurrentIndex((prev) => (prev + 1) % LOGOS.length);
         }
       } else {
         // Khi đang kéo, chỉ chặn không cho logo văng ra khỏi màn hình (không tính là nảy)
@@ -170,7 +166,7 @@ export const DVDLogoBouncer = () => {
       {/* Logo chính - z-50 để nổi TRÊN bề mặt chữ */}
       <img
         ref={logoRef}
-        src={images[currentIndex]}
+        src={LOGOS[currentIndex]}
         alt="DVD Bouncing Logo"
         // Thêm pointer-events-auto và cursor-grab để có thể kéo thả
         className="absolute top-0 left-0 w-[160px] md:w-[200px] h-auto object-contain z-50 pointer-events-auto cursor-grab active:cursor-grabbing"
