@@ -12,7 +12,11 @@ export const LogoCarousel = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
+      // Đảm bảo chỉ lặp khi trình duyệt (tab) đang được hiển thị.
+      // Điều này ngăn chặn bộ đếm thời gian bị dồn ứ (desync queue) khi treo máy nhiều tiếng đồng hồ.
+      if (!document.hidden) {
+        setCurrentIndex((prev) => (prev + 1) % images.length);
+      }
     }, 10000);
     return () => clearInterval(timer);
   }, []);
