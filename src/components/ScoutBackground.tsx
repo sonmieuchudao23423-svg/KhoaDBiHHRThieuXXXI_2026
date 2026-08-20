@@ -13,7 +13,7 @@ const generateEmbers = (count: number) => {
   }));
 };
 
-export const ScoutBackground = () => {
+export const ScoutBackground = ({ hideCampfireGlow = false }: { hideCampfireGlow?: boolean }) => {
   const [embers, setEmbers] = useState<any[]>([]);
 
   useEffect(() => {
@@ -48,8 +48,12 @@ export const ScoutBackground = () => {
       </svg>
 
       {/* 2. Ánh lửa bập bùng (Campfire Glow) ở phía dưới đại diện cho Đêm Lửa Trại */}
-      <div className="absolute -bottom-[20%] left-1/2 -translate-x-1/2 w-[80%] h-[60%] bg-orange-600/15 blur-[150px] rounded-[100%]" />
-      <div className="absolute -bottom-[10%] left-1/2 -translate-x-1/2 w-[50%] h-[40%] bg-yellow-500/10 blur-[100px] rounded-[100%]" />
+      {!hideCampfireGlow && (
+        <>
+          <div className="absolute -bottom-[20%] left-1/2 -translate-x-1/2 w-[80%] h-[60%] bg-orange-600/15 blur-[150px] rounded-[100%]" />
+          <div className="absolute -bottom-[10%] left-1/2 -translate-x-1/2 w-[50%] h-[40%] bg-yellow-500/10 blur-[100px] rounded-[100%]" />
+        </>
+      )}
       
       {/* 3. Ánh sáng xuyên qua tán lá (Forest light rays) ở phía trên đỉnh đầu */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[30%] bg-emerald-400/10 blur-[120px]" />

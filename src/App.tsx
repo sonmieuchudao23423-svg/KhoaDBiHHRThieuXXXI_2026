@@ -22,7 +22,7 @@ export function App() {
     <div className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-[#041c10] text-emerald-50 font-jakarta selection:bg-emerald-500/30">
 
       {/* Scout Theme Background (Campfire, Forest, Topographic) */}
-      <ScoutBackground />
+      <ScoutBackground hideCampfireGlow={isDvdEffect} />
 
       <main className="relative z-10 flex flex-col items-center justify-center w-full max-w-7xl mx-auto px-6 py-8 space-y-6 flex-1">
 
@@ -33,9 +33,9 @@ export function App() {
           transition={{ duration: 1 }}
           className="text-center space-y-4 md:space-y-5 max-w-6xl mt-4 md:mt-8 w-full px-4"
         >
-          <h1 className="md:text-5xl lg:text-[4rem] font-black tracking-tight leading-snug md:leading-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-600 drop-shadow-sm font-cinzel">
-            <span className="block whitespace-nowrap text-[5.5vw] sm:text-4xl md:text-inherit">KHÓA DỰ BỊ HUY HIỆU RỪNG</span>
-            <span className="block mt-1 md:mt-2 whitespace-nowrap text-[5vw] sm:text-3xl md:text-inherit">TRẦN QUỐC TOẢN XXXI</span>
+          <h1 className="font-black tracking-tight leading-snug md:leading-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-600 drop-shadow-sm font-cinzel px-2 py-1">
+            <span className="block whitespace-nowrap text-[min(5.5vw,4rem)]">KHÓA DỰ BỊ HHR NGÀNH THIẾU</span>
+            <span className="block mt-1 md:mt-2 whitespace-nowrap text-[min(5vw,3.5rem)]">TRẦN QUỐC TOẢN XXXI</span>
           </h1>
           <div className="text-emerald-100/90 font-medium tracking-wider text-sm md:text-base pt-2 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
             <span className="text-center">TP.Đà Nẵng</span>
