@@ -48,11 +48,11 @@ export function App() {
             <span className="block mt-1 md:mt-2 whitespace-nowrap text-[4vw] md:text-[min(5vw,3.5rem)]">TRẦN QUỐC TOẢN XXXI</span>
           </h1>
           <div className="text-emerald-100/90 font-medium tracking-wider text-sm md:text-base pt-2 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
-            <span className="text-center">TP.Đà Nẵng</span>
+            <span className="text-center">ONLINE</span>
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 hidden md:block"></span>
-            <span className="text-center">Khu du lịch sinh thái Hà Gia</span>
+            <span className="text-center">HƯỚNG ĐẠO VIỆT NAM</span>
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 hidden md:block"></span>
-            <span className="text-center font-bold text-emerald-300">28 - 30.08.2026</span>
+            <span className="text-center font-bold text-emerald-300">22.08.2026</span>
           </div>
         </motion.div>
 
